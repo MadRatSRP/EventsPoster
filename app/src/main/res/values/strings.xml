@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Urbanido</string>
+    <string name="app_name">EventsPoster</string>
     <string name="URL">https://hakatonapp.herokuapp.com/</string>
     <string name="hint_description">Опишите мероприятие</string>
     <string name="hint_title">Название мероприятия</string>

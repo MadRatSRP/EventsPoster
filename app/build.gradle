@@ -29,42 +29,59 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-
-    //google maps
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
-
-    //???
-    implementation 'androidx.media:media:1.0.0-beta01'
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
-    implementation 'androidx.exifinterface:exifinterface:1.0.0-beta01'
-
-    //Glide
-    implementation 'com.github.bumptech.glide:glide:4.8.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
-
-    //Picasso
-    implementation 'com.squareup.picasso:picasso:2.71828'
-
-    //Retrofit
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
-
-    // RxAndroid + OkHTTP + Logging Interceptor
-    implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.4.1'
-    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
-
-    //Chuck
-    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
-    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    // AppCompat
+    ext.appcompat = '1.1.0-rc01'
+    // ConstraintLayout
+    ext.constraint = '2.0.0-beta2'
+    // GoogleMaps
+    ext.gmaps = '17.0.0'
+    // Glide
+    ext.glide = '4.9.0'
+    // Picasso
+    ext.picasso = "2.71828"
+    // Retrofit
+    ext.retrofit = '2.6.1'
+    // RxAndroid
+    ext.rx_android = '2.1.1'
+    // OkHTTP + Logging Interceptor
+    ext.okhttp = '4.0.1'
+    // Chucker
+    ext.chucker = "2.0.4"
+    // Navigation Architecture Component
+    ext.navigation = '1.0.0'
 
-    //Navigation Architecture Component
-    implementation 'android.arch.navigation:navigation-fragment:1.0.0-rc01'
+    // AppCompat
+    implementation "androidx.appcompat:appcompat:$appcompat"
+    // ConstraintLayout
+    implementation "androidx.constraintlayout:constraintlayout:$constraint"
+    // GoogleMaps
+    implementation "com.google.android.gms:play-services-maps:$gmaps"
+    // Glide
+    implementation "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+    // Picasso
+    implementation "com.squareup.picasso:picasso:$picasso"
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
+    // RxAndroid
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_android"
+    // OkHTTP + Logging Interceptor
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp"
+    implementation "com.squareup.okhttp3:okhttp:$okhttp"
+    // Chucker
+    debugImplementation "com.github.ChuckerTeam.Chucker:library:$chucker"
+    releaseImplementation "com.github.ChuckerTeam.Chucker:library-no-op:$chucker"
+    // Navigation Architecture Component
+    implementation "android.arch.navigation:navigation-fragment:$navigation"
+    implementation "android.arch.navigation:navigation-ui:$navigation"
 }
 repositories {
+    // Chucker
+    maven { url 'https://jitpack.io' }
+    // Glide
     mavenCentral()
+    google()
 }
