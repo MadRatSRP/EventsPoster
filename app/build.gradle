@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId "idd.urbanido"
         minSdkVersion 22
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -31,21 +31,21 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     // AppCompat
-    ext.appcompat = '1.1.0-rc01'
+    ext.appcompat = '1.3.0-alpha01'
     // ConstraintLayout
-    ext.constraint = '2.0.0-beta2'
+    ext.constraint = '2.0.0-beta6'
     // GoogleMaps
     ext.gmaps = '17.0.0'
     // Glide
-    ext.glide = '4.9.0'
+    ext.glide = '4.11.0'
     // Picasso
     ext.picasso = "2.71828"
     // Retrofit
-    ext.retrofit = '2.6.1'
+    ext.retrofit = '2.9.0'
     // RxAndroid
     ext.rx_android = '2.1.1'
     // OkHTTP + Logging Interceptor
-    ext.okhttp = '4.0.1'
+    ext.okhttp = '4.7.2'
     // Chucker
     ext.chucker = "2.0.4"
     // Navigation Architecture Component
